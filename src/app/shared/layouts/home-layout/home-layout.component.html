@@ -1,0 +1,22 @@
+<div class="min-vh-100 d-flex flex-column ">
+  <app-topbar></app-topbar>
+  <app-navbar [title]="navTitle" [navItems]="navItems" [endContentTemplate]="navbarEndContent">
+    <!-- ng-cont -->
+    <!-- <p>Test  -->
+    <ng-template #navbarEndContent>
+      <button class="btn btn-dark px-3 " type="button" data-bs-toggle="modal" data-bs-target="#loginModal"
+        [routerLink]="['/login']">
+        Login
+      </button>
+      <button class="btn btn-dark px-3 m-1" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"
+        [routerLink]="['/signup']">
+        Signup
+      </button>
+    </ng-template>
+  </app-navbar>
+ 
+  <main class="container-fluid flex-grow-1 my-3">
+    <ng-content></ng-content>
+  </main>
+ 
+</div>

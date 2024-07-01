@@ -1,0 +1,17 @@
+<div class="list-group">
+  @for (item of items; track item; let i = $index) {
+    <button
+      type="button"
+      [routerLink]="item.routerLink"
+      routerLinkActive="active"
+      (click)="onItemClick($event, item, i)"
+      class="list-group-item list-group-item-action"
+    [ngClass]="{
+      active: selectedItemIndex === i
+    }"
+      >
+      {{ item.label }}
+    </button>
+  }
+</div>
+

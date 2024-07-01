@@ -1,0 +1,48 @@
+
+<form [formGroup]="form" (ngSubmit)="onFormSubmit()">
+@if (formMessage) {
+<small>{{ formMessage }}</small>
+}
+<div class="mt-3">
+    <label for="yearInput" class="form-text text-muted"> Year:</label>
+    <input formControlName="modelYear" type="number" placeholder="Please enter year:" id="yearInput" class="ms-3" />
+</div>
+
+<div class="mt-3">
+    <label for="plateInput" class="form-text text-muted"> Plate: </label>
+    <input formControlName="plate" type="text" placeholder="Please enter plate:" id="plateInput" class="ms-3" />
+</div>
+<div class="mt-3">
+    <label for="priceInput" class="form-text text-muted"> Daily Price: </label>
+    <input formControlName="dailyPrice" type="number" placeholder="Please enter price:" id="priceInput" class="ms-3" />
+</div>
+<div class="form-group">
+    <label for="stateInput" class="form-label">State:</label>
+    <select formControlName="state" id="stateInput" class="form-control">
+        <option value="1">Available</option>
+        <option value="2">Rented</option>
+        <option value="3">Under Maintenance</option>
+    </select>
+</div>
+
+<div class="form-group">
+    <label for="transmissionTypeIdInput" class="form-label"> Tranmission: </label>
+    <select formControlName="transmissionTypeId" id="transmissionTypeIdInput" class="form-control">
+        <option value="1">Manual</option>
+        <option value="2">Automatic</option>
+    </select>
+</div>
+
+<div class="form-group">
+    <label for="fuelTypeIdInput" class="form-label"> Fuel Type: </label>
+    <select formControlName="fuelTypeId" id="fuelTypeIdInput" class="form-control">
+        <option value="1">Gasoline</option>
+        <option value="2">Diesel</option>
+        <option value="3">Electic</option>
+    </select>
+</div>
+
+
+
+<app-button type="submit" variant="secondary" class="mt-1"> Create Car </app-button>
+</form>

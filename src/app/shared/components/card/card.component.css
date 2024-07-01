@@ -1,0 +1,25 @@
+:host {
+  display: block;
+ 
+  
+   
+}
+.card-text{
+  text-align: left;
+  text-wrap: balance;
+
+}
+
+.card-body{ 
+  
+  background-color: white;
+  position: initial;
+}
+
+.card-body:hover{
+  background-color: #F4F5F8;
+  transition: background-color 0.3s ease;
+  border-width: 1pt;
+  border-style: solid;
+  border-color: orange;
+}

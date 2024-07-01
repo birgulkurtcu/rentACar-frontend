@@ -1,0 +1,20 @@
+{
+  "routes": [
+    "/",
+    "/about",
+    "/admin",
+    "/admin/dashboard",
+    "/customer",
+    "/customer/dashboard",
+    "/login",
+    "/management",
+    "/management/brands",
+    "/management/brands/create",
+    "/management/cars",
+    "/management/cars/create",
+    "/management/models",
+    "/management/models/create",
+    "/payment",
+    "/signup"
+  ]
+}

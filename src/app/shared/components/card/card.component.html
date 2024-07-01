@@ -1,0 +1,16 @@
+<div class="card" style="width: 20rem;">
+    <img *ngIf="imageSrc" 
+        [src]="imageSrc" 
+        class="card-img-top" 
+        [alt]="imageAlt" 
+    />
+
+    <div class="card-body ">
+     
+      <h5 class=" card-title text-secondary text-uppercase mb-4" >{{title}} </h5>
+      
+      <p class="card-text text-secondary text-uppercase mb-4"> {{text}} </p>
+      
+      <button type="button" class="btn btn-primary text-uppercase center px-5" (click)="buttonClick.emit()"> {{buttonLabel}} </button>
+    </div>
+</div>

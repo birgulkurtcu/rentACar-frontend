@@ -1,0 +1,25 @@
+<app-home-layout>
+  
+  <app-carousel></app-carousel>
+  <app-about></app-about>
+  <h1 class="display-4 text-uppercase text-center mb-5">Rent Your Car</h1>
+  <div class="container pt-5 pb-3">
+    <div class="row">
+      <div class="col-3 text-uppercase mb-4">
+        <app-brands-list-menu
+          [initialSelectedBrandId] ="selectedBrandId"
+          (selectBrand)="onSelectBrand($event)">
+        </app-brands-list-menu>
+
+      </div>
+      <div class="col-8">
+        <app-models-card-list 
+          [brandId]="selectedBrandId">   
+        </app-models-card-list>
+      </div>
+    </div>
+  </div>
+
+  <app-contact></app-contact>
+  <app-footer></app-footer>
+</app-home-layout>
